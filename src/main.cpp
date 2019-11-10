@@ -33,8 +33,10 @@ std::ostream& operator<<(std::ostream& os, const Label& label) {
 
 int main(int argc, char* argv[]) {
     if (argc == 2)
-        Solve::solve(argv[1], 20);
+        Solve::solve(argv[1], 20, 2);
     if (argc == 3)
-        Solve::solve(argv[1], atoi(argv[2]));
+        Solve::solve(argv[1], atoi(argv[2]), 2);
+    if (argc == 4)
+        Solve::solve(argv[1], atoi(argv[2]), atoi(argv[3]));
     return 0;
 }

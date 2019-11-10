@@ -13,7 +13,7 @@
 class Solve {
 public:
     static string smv(const string& file_name, int k);
-    static void solve(const string& file_name, int k);
+    static void solve(const string& file_name, int k, int timeout);
 };
 
 

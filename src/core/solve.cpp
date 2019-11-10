@@ -27,7 +27,7 @@ string Solve::smv(const string& file_name, int k) {
     return res;
 }
 
-void Solve::solve(const string& file_name, int k) {
+void Solve::solve(const string& file_name, int k, int timeout) {
     string smv_str = smv(file_name, k);
     std::fstream fs;
     fs.open ("out.smv", std::fstream::out);
@@ -35,5 +35,7 @@ void Solve::solve(const string& file_name, int k) {
         fs << smv_str;
     }
     fs.close();
-    system("nuXmv out.smv");
+    string commond = "timeout " + std::to_string(timeout) + " nuXmv out.smv";
+    system(commond.c_str());
+    system("rm out.smv");
 }
