@@ -37,7 +37,7 @@ Translate::translate_to_fa(const INCRA& incra, const string& name, FA& fa,
     auto reg_max_value = make_int_value(k);
     if (atl::get_property(incra) != nullptr) {
         for (auto& reg_name : atl::get_property(incra) -> names()) {
-            auto reg_var = make_int_variable(reg_name, reg_init_value, reg_max_value);
+            auto reg_var = make_int_variable(reg_name);
             auto reg_var_1 = make_int_variable(reg_name + " + 1");
             auto reg_var_local = make_bool_variable(reg_name + "_l");
             auto reg_ap = make_atomic_proposition(reg_var, reg_init_value);
@@ -99,10 +99,14 @@ Translate::translate_to_fa(const INCRA& incra, const string& name, FA& fa,
                     auto reg_state_var = atl::get_property(fa, reg_state);
                     auto max_ap_reg = make_atomic_proposition(reg_state_var, reg_max_value, LSS);
                     auto max_ap_reg_1 = make_atomic_proposition(reg_state_var, reg_max_value, LEQ);
+                    //auto con_reg = make_conjunctive_fomular({min_ap, max_ap, state_ap,
+                     //                                        max_ap_reg, local_fomular});
                     auto con_reg = make_conjunctive_fomular({min_ap, max_ap, state_ap,
-                                                             max_ap_reg, local_fomular});
+                                                             local_fomular});
                     auto con_reg_1 = make_conjunctive_fomular({min_ap, max_ap, state_ap,
-                                                               max_ap_reg_1, local_fomular});
+                                                               local_fomular});
+                    //auto con_reg_1 = make_conjunctive_fomular({min_ap, max_ap, state_ap,
+                     //                                          max_ap_reg_1, local_fomular});
                     if (nums[i] == 0) {
                         add_transition(fa, reg_state, reg_state, con_reg_1);
                     } else {

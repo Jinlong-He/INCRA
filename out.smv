@@ -1,0 +1,1032 @@
+MODULE main
+IVAR
+c : 0..127;
+VAR
+s_0_0 : {v0,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,t,i};
+INIT
+s_0_0 = i
+ASSIGN
+next(s_0_0) := case
+( !TRUE & s_0_0 = i ) : s_0_0;
+( TRUE & s_0_0 = i ) : v0;
+( c >= 109 & c <= 109 & s_0_0 = v0 ) : v1;
+( c >= 111 & c <= 111 & s_0_0 = v1 ) : v2;
+( c >= 110 & c <= 110 & s_0_0 = v2 ) : v3;
+( c >= 103 & c <= 103 & s_0_0 = v3 ) : v4;
+( c >= 111 & c <= 111 & s_0_0 = v4 ) : v5;
+( c >= 100 & c <= 100 & s_0_0 = v5 ) : v6;
+( c >= 98 & c <= 98 & s_0_0 = v6 ) : v7;
+( c >= 58 & c <= 58 & s_0_0 = v7 ) : v8;
+( c >= 47 & c <= 47 & s_0_0 = v8 ) : v9;
+( c >= 47 & c <= 47 & s_0_0 = v9 ) : v10;
+( c >= 0 & c <= 127 & s_0_0 = v10 ) : v10;
+TRUE : t;
+esac;
+VAR
+R7 : integer;
+s_0_1 : {v0,t,i};
+R7_l : boolean;
+INIT
+s_0_1 = i
+INIT
+R7 = 0
+ASSIGN
+next(R7) := case
+( c >= 0 & c <= 127 & s_0_1 = v0 & ( R7_l = TRUE ) ) : R7 + 1;
+TRUE : R7;
+esac;
+next(s_0_1) := case
+( !TRUE & s_0_1 = i ) : s_0_1;
+( TRUE & s_0_1 = i ) : v0;
+( ( c >= 0 & c <= 127 & s_0_1 = v0 ) & ( R7_l = TRUE ) ) : v0;
+TRUE : t;
+esac;
+VAR
+R17 : integer;
+R16 : integer;
+s_0_2 : {v0,v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,t,i};
+R17_l : boolean;
+R16_l : boolean;
+INIT
+s_0_2 = i
+INIT
+R16 = 0
+INIT
+R17 = 0
+ASSIGN
+next(R17) := case
+( c >= 0 & c <= 127 & s_0_2 = v0 & ( R16_l = TRUE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 66 & c <= 127 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 65 & c <= 65 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 0 & c <= 43 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 45 & c <= 45 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 46 & c <= 46 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 48 & c <= 62 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 45 & c <= 45 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 66 & c <= 127 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 65 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 66 & c <= 114 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 65 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 116 & c <= 127 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 115 & c <= 115 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 127 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 127 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 45 & c <= 45 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 127 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 45 & c <= 45 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 116 & c <= 127 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 115 & c <= 115 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 114 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 111 & c <= 111 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 110 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 127 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 112 & c <= 127 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 100 & c <= 127 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 99 & c <= 99 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 127 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 65 & c <= 98 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 127 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = FALSE ) ) : R17;
+( c >= 108 & c <= 127 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 106 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 65 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 66 & c <= 110 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 112 & c <= 127 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 111 & c <= 111 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 66 & c <= 98 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 99 & c <= 99 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 65 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 100 & c <= 127 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 0 & c <= 43 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 66 & c <= 106 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 45 & c <= 45 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 65 & c <= 65 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 48 & c <= 62 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 46 & c <= 46 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+( c >= 108 & c <= 127 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R17 + 1;
+TRUE : R17;
+esac;
+next(R16) := case
+( c >= 0 & c <= 127 & s_0_2 = v0 & ( R16_l = TRUE & R17_l = TRUE ) ) : R16 + 1;
+( c >= 66 & c <= 127 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 65 & c <= 65 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v0 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 66 & c <= 127 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 65 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v1 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 66 & c <= 114 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 65 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 116 & c <= 127 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 115 & c <= 115 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v2 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 127 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 127 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v3 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 127 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 116 & c <= 127 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 115 & c <= 115 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 114 & s_0_2 = v4 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 111 & c <= 111 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 110 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 127 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 112 & c <= 127 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v5 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 100 & c <= 127 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 99 & c <= 99 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 127 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 65 & c <= 98 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v6 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 127 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = FALSE ) ) : R16;
+( c >= 108 & c <= 127 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 106 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v7 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 65 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 66 & c <= 110 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 112 & c <= 127 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 111 & c <= 111 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v8 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 66 & c <= 98 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 99 & c <= 99 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 65 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 100 & c <= 127 & s_0_2 = v9 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 0 & c <= 43 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 66 & c <= 106 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 45 & c <= 45 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 65 & c <= 65 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 48 & c <= 62 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 46 & c <= 46 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+( c >= 108 & c <= 127 & s_0_2 = v10 & ( R16_l = FALSE & R17_l = TRUE ) ) : R16;
+TRUE : R16;
+esac;
+next(s_0_2) := case
+( !TRUE & s_0_2 = i ) : s_0_2;
+( TRUE & s_0_2 = i ) : v0;
+( ( c >= 0 & c <= 127 & s_0_2 = v0 ) & ( R16_l = TRUE & R17_l = TRUE ) ) : v0;
+( ( c >= 66 & c <= 127 & s_0_2 = v0 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v1;
+( ( c >= 65 & c <= 65 & s_0_2 = v0 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 43 & s_0_2 = v0 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v1;
+( ( c >= 45 & c <= 45 & s_0_2 = v0 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v1;
+( ( c >= 46 & c <= 46 & s_0_2 = v0 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v2;
+( ( c >= 48 & c <= 62 & s_0_2 = v0 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v1;
+( ( c >= 45 & c <= 45 & s_0_2 = v1 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 66 & c <= 127 & s_0_2 = v1 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 46 & c <= 46 & s_0_2 = v1 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v2;
+( ( c >= 65 & c <= 65 & s_0_2 = v1 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 43 & s_0_2 = v1 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 48 & c <= 62 & s_0_2 = v1 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 43 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 66 & c <= 114 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 65 & c <= 65 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 116 & c <= 127 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 46 & c <= 46 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v2;
+( ( c >= 115 & c <= 115 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v8;
+( ( c >= 45 & c <= 45 & s_0_2 = v2 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 65 & c <= 127 & s_0_2 = v3 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 46 & c <= 46 & s_0_2 = v3 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v4;
+( ( c >= 0 & c <= 43 & s_0_2 = v3 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_2 = v3 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v3;
+( ( c >= 45 & c <= 45 & s_0_2 = v3 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v3 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v4;
+( ( c >= 45 & c <= 45 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 116 & c <= 127 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 115 & c <= 115 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v5;
+( ( c >= 0 & c <= 43 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 46 & c <= 46 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v4;
+( ( c >= 65 & c <= 114 & s_0_2 = v4 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 111 & c <= 111 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v6;
+( ( c >= 65 & c <= 110 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 46 & c <= 46 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v4;
+( ( c >= 0 & c <= 127 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v5;
+( ( c >= 112 & c <= 127 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 45 & c <= 45 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 43 & s_0_2 = v5 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 100 & c <= 127 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 99 & c <= 99 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v7;
+( ( c >= 0 & c <= 127 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v6;
+( ( c >= 65 & c <= 98 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 46 & c <= 46 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v4;
+( ( c >= 45 & c <= 45 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 43 & s_0_2 = v6 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 46 & c <= 46 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v4;
+( ( c >= 0 & c <= 43 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = FALSE ) ) : v7;
+( ( c >= 108 & c <= 127 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 45 & c <= 45 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 65 & c <= 106 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v7 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 65 & c <= 65 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 46 & c <= 46 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v2;
+( ( c >= 66 & c <= 110 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 43 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 112 & c <= 127 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 111 & c <= 111 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v9;
+( ( c >= 48 & c <= 62 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 45 & c <= 45 & s_0_2 = v8 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 66 & c <= 98 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 99 & c <= 99 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v10;
+( ( c >= 45 & c <= 45 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 65 & c <= 65 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 43 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 46 & c <= 46 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v2;
+( ( c >= 100 & c <= 127 & s_0_2 = v9 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 43 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 66 & c <= 106 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 45 & c <= 45 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 65 & c <= 65 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v3;
+( ( c >= 48 & c <= 62 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+( ( c >= 46 & c <= 46 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v2;
+( ( c >= 108 & c <= 127 & s_0_2 = v10 ) & ( R16_l = FALSE & R17_l = TRUE ) ) : v1;
+TRUE : t;
+esac;
+VAR
+R1 : integer;
+R0 : integer;
+R19 : integer;
+R18 : integer;
+s_0_3 : {v0,v1,v2,v3,v4,t,i};
+R1_l : boolean;
+R0_l : boolean;
+R19_l : boolean;
+R18_l : boolean;
+INIT
+s_0_3 = i
+INIT
+R18 = 0
+INIT
+R19 = 0
+INIT
+R0 = 0
+INIT
+R1 = 0
+ASSIGN
+next(R1) := case
+( c >= 0 & c <= 57 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = TRUE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 58 & c <= 58 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = TRUE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+( c >= 59 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 58 & c <= 58 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+( c >= 59 & c <= 127 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 0 & c <= 57 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 0 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = TRUE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 58 & c <= 58 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+( c >= 0 & c <= 57 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 59 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R1 + 1;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+( c >= 0 & c <= 127 & s_0_3 = v4 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R1;
+TRUE : R1;
+esac;
+next(R0) := case
+( c >= 0 & c <= 57 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R0;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = TRUE & R1_l = TRUE ) ) : R0 + 1;
+( c >= 58 & c <= 58 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = TRUE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+( c >= 59 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R0;
+( c >= 58 & c <= 58 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+( c >= 59 & c <= 127 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R0;
+( c >= 0 & c <= 57 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R0;
+( c >= 0 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = TRUE & R1_l = TRUE ) ) : R0 + 1;
+( c >= 58 & c <= 58 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+( c >= 0 & c <= 57 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R0;
+( c >= 59 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R0;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+( c >= 0 & c <= 127 & s_0_3 = v4 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R0;
+TRUE : R0;
+esac;
+next(R19) := case
+( c >= 0 & c <= 57 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R19;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = TRUE & R1_l = TRUE ) ) : R19;
+( c >= 58 & c <= 58 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R19;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = TRUE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R19 + 1;
+( c >= 59 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R19;
+( c >= 58 & c <= 58 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R19 + 1;
+( c >= 59 & c <= 127 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R19 + 1;
+( c >= 0 & c <= 57 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R19 + 1;
+( c >= 0 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = TRUE & R1_l = TRUE ) ) : R19 + 1;
+( c >= 58 & c <= 58 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R19 + 1;
+( c >= 0 & c <= 57 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R19 + 1;
+( c >= 59 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R19 + 1;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R19 + 1;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R19;
+( c >= 0 & c <= 127 & s_0_3 = v4 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R19;
+TRUE : R19;
+esac;
+next(R18) := case
+( c >= 0 & c <= 57 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R18;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = TRUE & R1_l = TRUE ) ) : R18;
+( c >= 58 & c <= 58 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R18;
+( c >= 0 & c <= 127 & s_0_3 = v0 & ( R18_l = TRUE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R18 + 1;
+( c >= 59 & c <= 127 & s_0_3 = v0 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : R18;
+( c >= 58 & c <= 58 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R18;
+( c >= 59 & c <= 127 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R18;
+( c >= 0 & c <= 57 & s_0_3 = v1 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R18;
+( c >= 0 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = TRUE & R1_l = TRUE ) ) : R18;
+( c >= 58 & c <= 58 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R18;
+( c >= 0 & c <= 57 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R18;
+( c >= 59 & c <= 127 & s_0_3 = v2 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : R18;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : R18;
+( c >= 0 & c <= 127 & s_0_3 = v3 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R18;
+( c >= 0 & c <= 127 & s_0_3 = v4 & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : R18;
+TRUE : R18;
+esac;
+next(s_0_3) := case
+( !TRUE & s_0_3 = i ) : s_0_3;
+( TRUE & s_0_3 = i ) : v0;
+( ( c >= 0 & c <= 57 & s_0_3 = v0 ) & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_3 = v0 ) & ( R18_l = FALSE & R19_l = FALSE & R0_l = TRUE & R1_l = TRUE ) ) : v2;
+( ( c >= 58 & c <= 58 & s_0_3 = v0 ) & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_3 = v0 ) & ( R18_l = TRUE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : v0;
+( ( c >= 59 & c <= 127 & s_0_3 = v0 ) & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = TRUE ) ) : v1;
+( ( c >= 58 & c <= 58 & s_0_3 = v1 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : v3;
+( ( c >= 59 & c <= 127 & s_0_3 = v1 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 57 & s_0_3 = v1 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_3 = v2 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = TRUE & R1_l = TRUE ) ) : v2;
+( ( c >= 58 & c <= 58 & s_0_3 = v2 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 57 & s_0_3 = v2 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : v1;
+( ( c >= 59 & c <= 127 & s_0_3 = v2 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_3 = v3 ) & ( R18_l = FALSE & R19_l = TRUE & R0_l = FALSE & R1_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_3 = v3 ) & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : v4;
+( ( c >= 0 & c <= 127 & s_0_3 = v4 ) & ( R18_l = FALSE & R19_l = FALSE & R0_l = FALSE & R1_l = FALSE ) ) : v4;
+TRUE : t;
+esac;
+VAR
+R4 : integer;
+R3 : integer;
+R21 : integer;
+R20 : integer;
+s_0_4 : {v0,v1,v2,v3,v4,t,i};
+R4_l : boolean;
+R3_l : boolean;
+R21_l : boolean;
+R20_l : boolean;
+INIT
+s_0_4 = i
+INIT
+R20 = 0
+INIT
+R21 = 0
+INIT
+R3 = 0
+INIT
+R4 = 0
+ASSIGN
+next(R4) := case
+( c >= 65 & c <= 65 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+( c >= 66 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 0 & c <= 64 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = TRUE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = TRUE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 65 & c <= 65 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+( c >= 66 & c <= 127 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 0 & c <= 64 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 65 & c <= 65 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+( c >= 0 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = TRUE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 66 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 0 & c <= 64 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R4 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+( c >= 0 & c <= 127 & s_0_4 = v4 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R4;
+TRUE : R4;
+esac;
+next(R3) := case
+( c >= 65 & c <= 65 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+( c >= 66 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R3;
+( c >= 0 & c <= 64 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R3;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = TRUE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = TRUE & R4_l = TRUE ) ) : R3 + 1;
+( c >= 65 & c <= 65 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+( c >= 66 & c <= 127 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R3;
+( c >= 0 & c <= 64 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R3;
+( c >= 65 & c <= 65 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+( c >= 0 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = TRUE & R4_l = TRUE ) ) : R3 + 1;
+( c >= 66 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R3;
+( c >= 0 & c <= 64 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R3;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+( c >= 0 & c <= 127 & s_0_4 = v4 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R3;
+TRUE : R3;
+esac;
+next(R21) := case
+( c >= 65 & c <= 65 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R21;
+( c >= 66 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R21;
+( c >= 0 & c <= 64 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R21;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = TRUE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R21 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = TRUE & R4_l = TRUE ) ) : R21;
+( c >= 65 & c <= 65 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R21 + 1;
+( c >= 66 & c <= 127 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R21 + 1;
+( c >= 0 & c <= 64 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R21 + 1;
+( c >= 65 & c <= 65 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R21 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = TRUE & R4_l = TRUE ) ) : R21 + 1;
+( c >= 66 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R21 + 1;
+( c >= 0 & c <= 64 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R21 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R21;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R21 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v4 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R21;
+TRUE : R21;
+esac;
+next(R20) := case
+( c >= 65 & c <= 65 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R20;
+( c >= 66 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R20;
+( c >= 0 & c <= 64 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : R20;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = TRUE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R20 + 1;
+( c >= 0 & c <= 127 & s_0_4 = v0 & ( R20_l = FALSE & R21_l = FALSE & R3_l = TRUE & R4_l = TRUE ) ) : R20;
+( c >= 65 & c <= 65 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R20;
+( c >= 66 & c <= 127 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R20;
+( c >= 0 & c <= 64 & s_0_4 = v1 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R20;
+( c >= 65 & c <= 65 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R20;
+( c >= 0 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = TRUE & R4_l = TRUE ) ) : R20;
+( c >= 66 & c <= 127 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R20;
+( c >= 0 & c <= 64 & s_0_4 = v2 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : R20;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R20;
+( c >= 0 & c <= 127 & s_0_4 = v3 & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : R20;
+( c >= 0 & c <= 127 & s_0_4 = v4 & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : R20;
+TRUE : R20;
+esac;
+next(s_0_4) := case
+( !TRUE & s_0_4 = i ) : s_0_4;
+( TRUE & s_0_4 = i ) : v0;
+( ( c >= 65 & c <= 65 & s_0_4 = v0 ) & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : v3;
+( ( c >= 66 & c <= 127 & s_0_4 = v0 ) & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_4 = v0 ) & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_4 = v0 ) & ( R20_l = TRUE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : v0;
+( ( c >= 0 & c <= 127 & s_0_4 = v0 ) & ( R20_l = FALSE & R21_l = FALSE & R3_l = TRUE & R4_l = TRUE ) ) : v2;
+( ( c >= 65 & c <= 65 & s_0_4 = v1 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : v3;
+( ( c >= 66 & c <= 127 & s_0_4 = v1 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_4 = v1 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : v1;
+( ( c >= 65 & c <= 65 & s_0_4 = v2 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_4 = v2 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = TRUE & R4_l = TRUE ) ) : v2;
+( ( c >= 66 & c <= 127 & s_0_4 = v2 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_4 = v2 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_4 = v3 ) & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : v4;
+( ( c >= 0 & c <= 127 & s_0_4 = v3 ) & ( R20_l = FALSE & R21_l = TRUE & R3_l = FALSE & R4_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_4 = v4 ) & ( R20_l = FALSE & R21_l = FALSE & R3_l = FALSE & R4_l = FALSE ) ) : v4;
+TRUE : t;
+esac;
+VAR
+R6 : integer;
+R23 : integer;
+R22 : integer;
+s_0_5 : {v0,v1,v2,t,i};
+R6_l : boolean;
+R23_l : boolean;
+R22_l : boolean;
+INIT
+s_0_5 = i
+INIT
+R22 = 0
+INIT
+R23 = 0
+INIT
+R6 = 0
+ASSIGN
+next(R6) := case
+( c >= 0 & c <= 127 & s_0_5 = v0 & ( R22_l = TRUE & R23_l = TRUE & R6_l = FALSE ) ) : R6;
+( c >= 0 & c <= 127 & s_0_5 = v0 & ( R22_l = FALSE & R23_l = FALSE & R6_l = TRUE ) ) : R6 + 1;
+( c >= 0 & c <= 127 & s_0_5 = v1 & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : R6;
+( c >= 0 & c <= 127 & s_0_5 = v1 & ( R22_l = FALSE & R23_l = TRUE & R6_l = TRUE ) ) : R6 + 1;
+( c >= 0 & c <= 127 & s_0_5 = v2 & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : R6;
+TRUE : R6;
+esac;
+next(R23) := case
+( c >= 0 & c <= 127 & s_0_5 = v0 & ( R22_l = TRUE & R23_l = TRUE & R6_l = FALSE ) ) : R23 + 1;
+( c >= 0 & c <= 127 & s_0_5 = v0 & ( R22_l = FALSE & R23_l = FALSE & R6_l = TRUE ) ) : R23;
+( c >= 0 & c <= 127 & s_0_5 = v1 & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : R23;
+( c >= 0 & c <= 127 & s_0_5 = v1 & ( R22_l = FALSE & R23_l = TRUE & R6_l = TRUE ) ) : R23 + 1;
+( c >= 0 & c <= 127 & s_0_5 = v2 & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : R23;
+TRUE : R23;
+esac;
+next(R22) := case
+( c >= 0 & c <= 127 & s_0_5 = v0 & ( R22_l = TRUE & R23_l = TRUE & R6_l = FALSE ) ) : R22 + 1;
+( c >= 0 & c <= 127 & s_0_5 = v0 & ( R22_l = FALSE & R23_l = FALSE & R6_l = TRUE ) ) : R22;
+( c >= 0 & c <= 127 & s_0_5 = v1 & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : R22;
+( c >= 0 & c <= 127 & s_0_5 = v1 & ( R22_l = FALSE & R23_l = TRUE & R6_l = TRUE ) ) : R22;
+( c >= 0 & c <= 127 & s_0_5 = v2 & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : R22;
+TRUE : R22;
+esac;
+next(s_0_5) := case
+( !TRUE & s_0_5 = i ) : s_0_5;
+( TRUE & s_0_5 = i ) : v0;
+( ( c >= 0 & c <= 127 & s_0_5 = v0 ) & ( R22_l = TRUE & R23_l = TRUE & R6_l = FALSE ) ) : v0;
+( ( c >= 0 & c <= 127 & s_0_5 = v0 ) & ( R22_l = FALSE & R23_l = FALSE & R6_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_5 = v1 ) & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : v2;
+( ( c >= 0 & c <= 127 & s_0_5 = v1 ) & ( R22_l = FALSE & R23_l = TRUE & R6_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_5 = v2 ) & ( R22_l = FALSE & R23_l = FALSE & R6_l = FALSE ) ) : v2;
+TRUE : t;
+esac;
+VAR
+R9 : integer;
+R8 : integer;
+R25 : integer;
+R24 : integer;
+s_0_6 : {v0,v1,v2,v3,v4,t,i};
+R9_l : boolean;
+R8_l : boolean;
+R25_l : boolean;
+R24_l : boolean;
+INIT
+s_0_6 = i
+INIT
+R24 = 0
+INIT
+R25 = 0
+INIT
+R8 = 0
+INIT
+R9 = 0
+ASSIGN
+next(R9) := case
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = TRUE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = TRUE & R9_l = TRUE ) ) : R9 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = TRUE & R9_l = TRUE ) ) : R9 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = TRUE ) ) : R9 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+( c >= 0 & c <= 127 & s_0_6 = v4 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R9;
+TRUE : R9;
+esac;
+next(R8) := case
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = TRUE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = TRUE & R9_l = TRUE ) ) : R8 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = TRUE & R9_l = TRUE ) ) : R8 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = TRUE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+( c >= 0 & c <= 127 & s_0_6 = v4 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R8;
+TRUE : R8;
+esac;
+next(R25) := case
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = TRUE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R25 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = TRUE & R9_l = TRUE ) ) : R25;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R25;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = TRUE & R9_l = TRUE ) ) : R25 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R25 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R25 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = TRUE ) ) : R25 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R25;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R25;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R25 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v4 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R25;
+TRUE : R25;
+esac;
+next(R24) := case
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = TRUE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R24 + 1;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = TRUE & R9_l = TRUE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v0 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = TRUE & R9_l = TRUE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v1 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = TRUE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v2 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v3 & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+( c >= 0 & c <= 127 & s_0_6 = v4 & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : R24;
+TRUE : R24;
+esac;
+next(s_0_6) := case
+( !TRUE & s_0_6 = i ) : s_0_6;
+( TRUE & s_0_6 = i ) : v0;
+( ( c >= 0 & c <= 127 & s_0_6 = v0 ) & ( R24_l = TRUE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : v0;
+( ( c >= 0 & c <= 127 & s_0_6 = v0 ) & ( R24_l = FALSE & R25_l = FALSE & R8_l = TRUE & R9_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_6 = v0 ) & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : v2;
+( ( c >= 0 & c <= 127 & s_0_6 = v1 ) & ( R24_l = FALSE & R25_l = TRUE & R8_l = TRUE & R9_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_6 = v1 ) & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : v2;
+( ( c >= 0 & c <= 127 & s_0_6 = v2 ) & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_6 = v2 ) & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = TRUE ) ) : v2;
+( ( c >= 0 & c <= 127 & s_0_6 = v2 ) & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : v4;
+( ( c >= 0 & c <= 127 & s_0_6 = v3 ) & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : v4;
+( ( c >= 0 & c <= 127 & s_0_6 = v3 ) & ( R24_l = FALSE & R25_l = TRUE & R8_l = FALSE & R9_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_6 = v4 ) & ( R24_l = FALSE & R25_l = FALSE & R8_l = FALSE & R9_l = FALSE ) ) : v4;
+TRUE : t;
+esac;
+VAR
+R11 : integer;
+R10 : integer;
+R27 : integer;
+R26 : integer;
+s_0_7 : {v0,v1,v2,v3,t,i};
+R11_l : boolean;
+R10_l : boolean;
+R27_l : boolean;
+R26_l : boolean;
+INIT
+s_0_7 = i
+INIT
+R26 = 0
+INIT
+R27 = 0
+INIT
+R10 = 0
+INIT
+R11 = 0
+ASSIGN
+next(R11) := case
+( c >= 66 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = TRUE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 0 & c <= 64 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = TRUE & R11_l = TRUE ) ) : R11 + 1;
+( c >= 0 & c <= 64 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R11 + 1;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 66 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R11 + 1;
+( c >= 0 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = TRUE & R11_l = TRUE ) ) : R11 + 1;
+( c >= 66 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 0 & c <= 64 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+( c >= 0 & c <= 127 & s_0_7 = v3 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R11;
+TRUE : R11;
+esac;
+next(R10) := case
+( c >= 66 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = TRUE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 0 & c <= 64 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = TRUE & R11_l = TRUE ) ) : R10 + 1;
+( c >= 0 & c <= 64 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R10;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 66 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R10;
+( c >= 0 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = TRUE & R11_l = TRUE ) ) : R10 + 1;
+( c >= 66 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 0 & c <= 64 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+( c >= 0 & c <= 127 & s_0_7 = v3 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R10;
+TRUE : R10;
+esac;
+next(R27) := case
+( c >= 66 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R27;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = TRUE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R27 + 1;
+( c >= 0 & c <= 64 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R27;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = TRUE & R11_l = TRUE ) ) : R27;
+( c >= 0 & c <= 64 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R27 + 1;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R27;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R27 + 1;
+( c >= 66 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R27 + 1;
+( c >= 0 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = TRUE & R11_l = TRUE ) ) : R27 + 1;
+( c >= 66 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R27 + 1;
+( c >= 0 & c <= 64 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R27 + 1;
+( c >= 0 & c <= 127 & s_0_7 = v3 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R27;
+TRUE : R27;
+esac;
+next(R26) := case
+( c >= 66 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = TRUE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R26 + 1;
+( c >= 0 & c <= 64 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+( c >= 0 & c <= 127 & s_0_7 = v0 & ( R26_l = FALSE & R27_l = FALSE & R10_l = TRUE & R11_l = TRUE ) ) : R26;
+( c >= 0 & c <= 64 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R26;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+( c >= 0 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+( c >= 66 & c <= 127 & s_0_7 = v1 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : R26;
+( c >= 0 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = TRUE & R11_l = TRUE ) ) : R26;
+( c >= 66 & c <= 127 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+( c >= 0 & c <= 64 & s_0_7 = v2 & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+( c >= 0 & c <= 127 & s_0_7 = v3 & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : R26;
+TRUE : R26;
+esac;
+next(s_0_7) := case
+( !TRUE & s_0_7 = i ) : s_0_7;
+( TRUE & s_0_7 = i ) : v0;
+( ( c >= 66 & c <= 127 & s_0_7 = v0 ) & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_7 = v0 ) & ( R26_l = TRUE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : v0;
+( ( c >= 0 & c <= 64 & s_0_7 = v0 ) & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_7 = v0 ) & ( R26_l = FALSE & R27_l = FALSE & R10_l = TRUE & R11_l = TRUE ) ) : v2;
+( ( c >= 0 & c <= 64 & s_0_7 = v1 ) & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_7 = v1 ) & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_7 = v1 ) & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : v1;
+( ( c >= 66 & c <= 127 & s_0_7 = v1 ) & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_7 = v2 ) & ( R26_l = FALSE & R27_l = TRUE & R10_l = TRUE & R11_l = TRUE ) ) : v2;
+( ( c >= 66 & c <= 127 & s_0_7 = v2 ) & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_7 = v2 ) & ( R26_l = FALSE & R27_l = TRUE & R10_l = FALSE & R11_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_7 = v3 ) & ( R26_l = FALSE & R27_l = FALSE & R10_l = FALSE & R11_l = FALSE ) ) : v3;
+TRUE : t;
+esac;
+VAR
+R13 : integer;
+R12 : integer;
+R29 : integer;
+R28 : integer;
+s_0_8 : {v0,v1,v2,v3,v4,t,i};
+R13_l : boolean;
+R12_l : boolean;
+R29_l : boolean;
+R28_l : boolean;
+INIT
+s_0_8 = i
+INIT
+R28 = 0
+INIT
+R29 = 0
+INIT
+R12 = 0
+INIT
+R13 = 0
+ASSIGN
+next(R13) := case
+( c >= 83 & c <= 83 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = TRUE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 84 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = TRUE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 65 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 65 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 83 & c <= 83 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 84 & c <= 127 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 83 & c <= 83 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = TRUE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 0 & c <= 65 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 84 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 83 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 65 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R13 + 1;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+( c >= 0 & c <= 127 & s_0_8 = v4 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R13;
+TRUE : R13;
+esac;
+next(R12) := case
+( c >= 83 & c <= 83 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = TRUE & R13_l = TRUE ) ) : R12 + 1;
+( c >= 84 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = TRUE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 65 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 65 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R12;
+( c >= 83 & c <= 83 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R12;
+( c >= 84 & c <= 127 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R12;
+( c >= 83 & c <= 83 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = TRUE & R13_l = TRUE ) ) : R12 + 1;
+( c >= 0 & c <= 65 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 84 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 83 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R12;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 65 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R12;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+( c >= 0 & c <= 127 & s_0_8 = v4 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R12;
+TRUE : R12;
+esac;
+next(R29) := case
+( c >= 83 & c <= 83 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R29;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = TRUE & R13_l = TRUE ) ) : R29;
+( c >= 84 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R29;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = TRUE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R29 + 1;
+( c >= 0 & c <= 65 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R29;
+( c >= 0 & c <= 65 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R29 + 1;
+( c >= 83 & c <= 83 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R29 + 1;
+( c >= 84 & c <= 127 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R29 + 1;
+( c >= 83 & c <= 83 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R29 + 1;
+( c >= 0 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = TRUE & R13_l = TRUE ) ) : R29 + 1;
+( c >= 0 & c <= 65 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R29 + 1;
+( c >= 84 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R29 + 1;
+( c >= 83 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R29 + 1;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R29 + 1;
+( c >= 0 & c <= 65 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R29 + 1;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R29;
+( c >= 0 & c <= 127 & s_0_8 = v4 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R29;
+TRUE : R29;
+esac;
+next(R28) := case
+( c >= 83 & c <= 83 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = TRUE & R13_l = TRUE ) ) : R28;
+( c >= 84 & c <= 127 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 0 & c <= 127 & s_0_8 = v0 & ( R28_l = TRUE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R28 + 1;
+( c >= 0 & c <= 65 & s_0_8 = v0 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 0 & c <= 65 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R28;
+( c >= 83 & c <= 83 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R28;
+( c >= 84 & c <= 127 & s_0_8 = v1 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R28;
+( c >= 83 & c <= 83 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 0 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = TRUE & R13_l = TRUE ) ) : R28;
+( c >= 0 & c <= 65 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 84 & c <= 127 & s_0_8 = v2 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 83 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R28;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 0 & c <= 65 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : R28;
+( c >= 0 & c <= 127 & s_0_8 = v3 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+( c >= 0 & c <= 127 & s_0_8 = v4 & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : R28;
+TRUE : R28;
+esac;
+next(s_0_8) := case
+( !TRUE & s_0_8 = i ) : s_0_8;
+( TRUE & s_0_8 = i ) : v0;
+( ( c >= 83 & c <= 83 & s_0_8 = v0 ) & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_8 = v0 ) & ( R28_l = FALSE & R29_l = FALSE & R12_l = TRUE & R13_l = TRUE ) ) : v2;
+( ( c >= 84 & c <= 127 & s_0_8 = v0 ) & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_8 = v0 ) & ( R28_l = TRUE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : v0;
+( ( c >= 0 & c <= 65 & s_0_8 = v0 ) & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 65 & s_0_8 = v1 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : v1;
+( ( c >= 83 & c <= 83 & s_0_8 = v1 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : v3;
+( ( c >= 84 & c <= 127 & s_0_8 = v1 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : v1;
+( ( c >= 83 & c <= 83 & s_0_8 = v2 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_8 = v2 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = TRUE & R13_l = TRUE ) ) : v2;
+( ( c >= 0 & c <= 65 & s_0_8 = v2 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : v1;
+( ( c >= 84 & c <= 127 & s_0_8 = v2 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : v1;
+( ( c >= 83 & c <= 127 & s_0_8 = v3 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_8 = v3 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = FALSE ) ) : v3;
+( ( c >= 0 & c <= 65 & s_0_8 = v3 ) & ( R28_l = FALSE & R29_l = TRUE & R12_l = FALSE & R13_l = TRUE ) ) : v3;
+( ( c >= 0 & c <= 127 & s_0_8 = v3 ) & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : v4;
+( ( c >= 0 & c <= 127 & s_0_8 = v4 ) & ( R28_l = FALSE & R29_l = FALSE & R12_l = FALSE & R13_l = FALSE ) ) : v4;
+TRUE : t;
+esac;
+VAR
+R15 : integer;
+R14 : integer;
+R31 : integer;
+R30 : integer;
+s_0_9 : {v0,v1,v2,v3,t,i};
+R15_l : boolean;
+R14_l : boolean;
+R31_l : boolean;
+R30_l : boolean;
+INIT
+s_0_9 = i
+INIT
+R30 = 0
+INIT
+R31 = 0
+INIT
+R14 = 0
+INIT
+R15 = 0
+ASSIGN
+next(R15) := case
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = TRUE & R15_l = TRUE ) ) : R15 + 1;
+( c >= 65 & c <= 65 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 0 & c <= 64 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 84 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = TRUE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 65 & c <= 65 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R15 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 84 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R15 + 1;
+( c >= 0 & c <= 64 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R15 + 1;
+( c >= 84 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 65 & c <= 65 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 0 & c <= 64 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+( c >= 0 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = TRUE & R15_l = TRUE ) ) : R15 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v3 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R15;
+TRUE : R15;
+esac;
+next(R14) := case
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = TRUE & R15_l = TRUE ) ) : R14 + 1;
+( c >= 65 & c <= 65 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 0 & c <= 64 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 84 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = TRUE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 65 & c <= 65 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R14;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 84 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R14;
+( c >= 0 & c <= 64 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R14;
+( c >= 84 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 65 & c <= 65 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 0 & c <= 64 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+( c >= 0 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = TRUE & R15_l = TRUE ) ) : R14 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v3 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R14;
+TRUE : R14;
+esac;
+next(R31) := case
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = TRUE & R15_l = TRUE ) ) : R31;
+( c >= 65 & c <= 65 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R31;
+( c >= 0 & c <= 64 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R31;
+( c >= 84 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R31;
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = TRUE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R31 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R31;
+( c >= 65 & c <= 65 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R31 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R31 + 1;
+( c >= 84 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R31 + 1;
+( c >= 0 & c <= 64 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R31 + 1;
+( c >= 84 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R31 + 1;
+( c >= 65 & c <= 65 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R31 + 1;
+( c >= 0 & c <= 64 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R31 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = TRUE & R15_l = TRUE ) ) : R31 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v3 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R31;
+TRUE : R31;
+esac;
+next(R30) := case
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = TRUE & R15_l = TRUE ) ) : R30;
+( c >= 65 & c <= 65 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 0 & c <= 64 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 84 & c <= 127 & s_0_9 = v0 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 0 & c <= 127 & s_0_9 = v0 & ( R30_l = TRUE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R30 + 1;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 65 & c <= 65 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R30;
+( c >= 0 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 84 & c <= 127 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R30;
+( c >= 0 & c <= 64 & s_0_9 = v1 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : R30;
+( c >= 84 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 65 & c <= 65 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 0 & c <= 64 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+( c >= 0 & c <= 127 & s_0_9 = v2 & ( R30_l = FALSE & R31_l = TRUE & R14_l = TRUE & R15_l = TRUE ) ) : R30;
+( c >= 0 & c <= 127 & s_0_9 = v3 & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : R30;
+TRUE : R30;
+esac;
+next(s_0_9) := case
+( !TRUE & s_0_9 = i ) : s_0_9;
+( TRUE & s_0_9 = i ) : v0;
+( ( c >= 0 & c <= 127 & s_0_9 = v0 ) & ( R30_l = FALSE & R31_l = FALSE & R14_l = TRUE & R15_l = TRUE ) ) : v2;
+( ( c >= 65 & c <= 65 & s_0_9 = v0 ) & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_9 = v0 ) & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 84 & c <= 127 & s_0_9 = v0 ) & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_9 = v0 ) & ( R30_l = TRUE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : v0;
+( ( c >= 0 & c <= 127 & s_0_9 = v1 ) & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : v3;
+( ( c >= 65 & c <= 65 & s_0_9 = v1 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_9 = v1 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 84 & c <= 127 & s_0_9 = v1 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_9 = v1 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = TRUE ) ) : v1;
+( ( c >= 84 & c <= 127 & s_0_9 = v2 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 65 & c <= 65 & s_0_9 = v2 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 64 & s_0_9 = v2 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = FALSE & R15_l = FALSE ) ) : v1;
+( ( c >= 0 & c <= 127 & s_0_9 = v2 ) & ( R30_l = FALSE & R31_l = TRUE & R14_l = TRUE & R15_l = TRUE ) ) : v2;
+( ( c >= 0 & c <= 127 & s_0_9 = v3 ) & ( R30_l = FALSE & R31_l = FALSE & R14_l = FALSE & R15_l = FALSE ) ) : v3;
+TRUE : t;
+esac;
+VAR
+s_1_0 : {v0,v1,t,i};
+INIT
+s_1_0 = i
+ASSIGN
+next(s_1_0) := case
+( !( ( s_0_0 = v10 ) & ( s_0_1 = v0 ) & ( s_0_2 = v7 | s_0_2 = v6 | s_0_2 = v5 | s_0_2 = v4 | s_0_2 = v3 ) & ( s_0_3 = v4 | s_0_3 = v3 ) & ( s_0_4 = v4 | s_0_4 = v3 ) & ( s_0_5 = v2 | s_0_5 = v1 ) & ( s_0_6 = v4 | s_0_6 = v3 | s_0_6 = v2 ) & ( s_0_7 = v3 | s_0_7 = v1 ) & ( s_0_8 = v4 | s_0_8 = v3 ) & ( s_0_9 = v3 | s_0_9 = v1 ) ) & s_1_0 = i ) : s_1_0;
+( ( ( s_0_0 = v10 ) & ( s_0_1 = v0 ) & ( s_0_2 = v7 | s_0_2 = v6 | s_0_2 = v5 | s_0_2 = v4 | s_0_2 = v3 ) & ( s_0_3 = v4 | s_0_3 = v3 ) & ( s_0_4 = v4 | s_0_4 = v3 ) & ( s_0_5 = v2 | s_0_5 = v1 ) & ( s_0_6 = v4 | s_0_6 = v3 | s_0_6 = v2 ) & ( s_0_7 = v3 | s_0_7 = v1 ) & ( s_0_8 = v4 | s_0_8 = v3 ) & ( s_0_9 = v3 | s_0_9 = v1 ) ) & s_1_0 = i ) : v0;
+( c >= 97 & c <= 97 & s_1_0 = v0 ) : v1;
+TRUE : t;
+esac;
+VAR
+P24: 0..20;
+ P23: 0..20;
+ P4: 0..20;
+ P2: 0..20;
+ P0: 0..20;
+INVARSPEC !(( ( s_1_0 = v1 ) ) & P24 + -1*P23 != 0 & -1*P4 + P2 + -1 >= 0 & P4 + 1 >= 0 & P2 + -1 >= 0 & P0 + -10 >= 0 & ((R31 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R30 + -1 * 10) = 0) & ((R29 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R28 + -1 * 10) = 0) & ((R27 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R26 + -1 * 10) = 0) & ((R25 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R24 + -1 * 10) = 0) & ((R23 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R22 + -1 * 10) = 0) & ((R21 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R20 + -1 * 10) = 0) & ((R19 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R18 + -1 * 10) = 0) & ((R17 + -1 * ((P0 + -10) + -1 * 1)) = 0) & ((R16 + -1 * 10) = 0) & ((R15 + -1 * ((P4 + 1) + -1 * 1)) = 0) & (R14 = 0) & ((R13 + -1 * (((-1 * P4 + P2) + -1) + -1 * 1)) = 0) & ((R12 + -1 * (P4 + 1)) = 0) & ((R11 + -1 * (((-1 * P4 + P2) + -1) + -1 * 1)) = 0) & ((R10 + -1 * (P4 + 1)) = 0) & (R9 = 0) & (R8 = 0) & ((R7 + -1 * P0) = 0) & ((R6 + -1 * P2) = 0) & ((R4 + -1 * P4) = 0) & (-1 * 0 >= 0) & (R3 = 0) & ((R1 + -1 * -1) = 0) & (-1 * 0 >= 0) & (R0 = 0) & TRUE)
