@@ -55,7 +55,7 @@ namespace atl {
         }
 
         ~DeterministicFiniteAutomaton() {
-            cout << "delete dfa" << endl;
+            //cout << "delete dfa" << endl;
         }
 
         void clear() {

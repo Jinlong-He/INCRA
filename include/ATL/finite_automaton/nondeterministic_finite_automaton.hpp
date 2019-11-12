@@ -54,7 +54,7 @@ namespace atl {
         }
 
         ~NondeterministicFiniteAutomaton() {
-            cout << "delete nfa" << endl;
+            //cout << "delete nfa" << endl;
         }
 
         void clear() {

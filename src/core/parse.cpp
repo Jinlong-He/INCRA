@@ -25,11 +25,11 @@ void Parse::parse_constrain(const vector<string>& strs,
            length = strs[0].find_first_of(")") - pos;
     vector<string> var_strs;
     boost::split(var_strs, strs[0].substr(pos, length), boost::is_any_of(","));
-    cout << strs[0].substr(pos, length) << endl;
+    //cout << strs[0].substr(pos, length) << endl;
     if (length > 0) {
         for (auto& s : var_strs) {
             //cout << s << endl;
-            var_str += s + ": 0.." + std::to_string(k) + ";\n";
+            var_str += s + " : integer;\n";
         }
     }
     fomular_str = strs[2];
@@ -47,9 +47,9 @@ void Parse::parse_incra(const vector<string>& strs,
     boost::split(final_num_strs, final_strs[1].substr(0,length), boost::is_any_of(","));
     int states_num = atoi(states_strs[1].c_str());
     int init_num = atoi(init_strs[1].c_str());
-    cout << "final" << final_strs[1].substr(0,length) << endl;
+    //cout << "final" << final_strs[1].substr(0,length) << endl;
     for (auto& str : final_num_strs) {
-        cout <<  atoi(str.c_str())<< endl;
+        //cout <<  atoi(str.c_str())<< endl;
         final_nums.insert(atoi(str.c_str()));
     }
     for (int i = 0; i < states_num; i++) {
@@ -64,7 +64,7 @@ void Parse::parse_incra(const vector<string>& strs,
     size_t reg_length = reg_name_strs[1].find_last_of(";") - 1;
     RegisterNamesPtr register_names = std::make_shared<RegisterNames>(reg_name_strs[1].substr(1,reg_length));
     if (reg_name_strs[1].length() > 2) {
-    cout << "name: " << reg_name_strs[1].substr(1, reg_length) <<endl;
+    //cout << "name: " << reg_name_strs[1].substr(1, reg_length) <<endl;
         atl::set_property(incra, register_names);
     }
     for (ID i = 4; i < strs.size() - 1; i++) {

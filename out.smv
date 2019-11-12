@@ -2,23 +2,36 @@ MODULE main
 IVAR
 c : 0..127;
 VAR
-R0 : integer;
-s_0_0 : {v0,t,i};
-R0_l : boolean;
+s_0_0 : {v0,v1,t,i};
 INIT
 s_0_0 = i
+ASSIGN
+next(s_0_0) := case
+( !TRUE & s_0_0 = i ) : s_0_0;
+( TRUE & s_0_0 = i ) : v0;
+( c >= 47 & c <= 47 & s_0_0 = v0 ) : v1;
+( c >= 0 & c <= 127 & s_0_0 = v1 ) : v1;
+TRUE : t;
+esac;
+VAR
+R0 : integer;
+s_0_1 : {v0,t,i};
+R0_l : boolean;
+INIT
+s_0_1 = i
 INIT
 R0 = 0
 ASSIGN
 next(R0) := case
-( c >= 0 & c <= 127 & s_0_0 = v0 & ( R0_l = TRUE ) ) : R0 + 1;
+( c >= 0 & c <= 127 & s_0_1 = v0 & ( R0_l = TRUE ) ) : R0 + 1;
 TRUE : R0;
 esac;
-next(s_0_0) := case
-( !TRUE & s_0_0 = i ) : s_0_0;
-( TRUE & s_0_0 = i ) : v0;
-( ( c >= 0 & c <= 127 & s_0_0 = v0 ) & ( R0_l = TRUE ) ) : v0;
+next(s_0_1) := case
+( !TRUE & s_0_1 = i ) : s_0_1;
+( TRUE & s_0_1 = i ) : v0;
+( ( c >= 0 & c <= 127 & s_0_1 = v0 ) & ( R0_l = TRUE ) ) : v0;
 TRUE : t;
 esac;
 VAR
-INVARSPEC !(( ( s_0_0 = v0 ) ) & TRUE & ((R0 + -1 * 5) = 0) & TRUE)
+P0 : integer;
+INVARSPEC !(( ( s_0_0 = v1 ) & ( s_0_1 = v0 ) ) & P0 != 0 & ((R0 + -1 * P0) = 0) & TRUE)
